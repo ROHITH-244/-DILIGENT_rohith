@@ -19,14 +19,14 @@ def generate_llm_response(prompt: str) -> str:
     
     url = "http://localhost:11434/api/generate"
     
-    # Try with memory-optimized settings first
+    # Try with phi3 model which is more memory efficient
     payload = {
-        "model": "llama3",
+        "model": "phi3",  # Using phi3 model which is smaller and more memory efficient
         "prompt": prompt,
         "stream": False,
         "options": {
-            "num_ctx": 512,    # Minimal context to save memory
-            "num_predict": 100, # Shorter predictions to save memory
+            "num_ctx": 1024,   # Context size appropriate for phi3
+            "num_predict": 150, # Reasonable prediction length for phi3
             "temperature": 0.7,
             "top_p": 0.9
         }

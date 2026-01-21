@@ -4,9 +4,13 @@ import json
 def test_ollama_connection():
     url = 'http://localhost:11434/api/generate'
     payload = {
-        'model': 'llama3',
+        'model': 'phi3',
         'prompt': 'Say hello',
-        'stream': False
+        'stream': False,
+        'options': {
+            'num_ctx': 1024,
+            'num_predict': 150
+        }
     }
 
     try:
