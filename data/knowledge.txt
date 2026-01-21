@@ -1,0 +1,3 @@
+This is sample knowledge data for the Jarvis AI assistant. The system will use this text to answer questions through the RAG (Retrieval-Augmented Generation) pipeline. The knowledge base can be expanded with more detailed information about various topics relevant to the assistant's purpose.
+
+The assistant uses Pinecone vector database to store embeddings of this knowledge, allowing for semantic search and retrieval of relevant information when responding to user queries. This enables the LLM to provide factually grounded responses based on the provided knowledge base.
